@@ -1,0 +1,37 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"wanderlust\"}}]": "utter_offer_travel_offer",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"wanderlust\"}}, {\"active_loop\": {\"name\": \"city_form1\"}, \"prev_action\": {\"action_name\": \"utter_offer_travel_offer\"}, \"user\": {\"intent\": \"wanderlust\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "city_form1"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"city_form1\"}, \"prev_action\": {\"action_name\": \"utter_offer_travel_offer\"}, \"user\": {\"intent\": \"wanderlust\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "handling active loops and forms - city_form4",
+      "handling active loops and forms - city_form1 - action_listen",
+      "handling active loops and forms - city_form1",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"wanderlust\"}}, {\"active_loop\": {\"name\": \"city_form1\"}, \"prev_action\": {\"action_name\": \"utter_offer_travel_offer\"}, \"user\": {\"intent\": \"wanderlust\"}}]",
+      "predicting default action with intent restart",
+      "handling active loops and forms - city_form3 - action_listen",
+      "handling active loops and forms - city_form2 - action_listen",
+      "handling active loops and forms - city_form3",
+      "handling active loops and forms - city_form5 - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "handling active loops and forms - city_form5",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "handling active loops and forms - city_form2",
+      "handling active loops and forms - city_form4 - action_listen",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

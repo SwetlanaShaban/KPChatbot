@@ -1,0 +1,112 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - wanderlust
+  - one_city
+
+entities:
+  - first_city
+  - second_city
+  - third_city
+  - fourth_city
+  - fifth_city
+  - amount_cities
+
+slots:
+  first_city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: first_city
+        conditions:
+          - active_loop: city_form1
+  second_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: second_city
+    influence_conversation: true
+  third_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: third_city
+    influence_conversation: true
+  fourth_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fourth_city
+    influence_conversation: true
+  fifth_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fifth_city
+    influence_conversation: true
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_goodbye:
+    - text: "Goodbye ^^"
+
+  utter_happy:
+    - text: "I am happy ^^, tank you?"
+
+  utter_offer_travel_offer:
+    - text: "I will now start a travel offer conversation with you! How many cities do you want to visit?"
+
+  utter_ask_for_city_names:
+    - text: "What are the city name(s)?"
+
+  utter_submit_city1:
+    - text: "Thank you very much. I will remember that you will travel to {first_city}"
+
+actions:
+- utter_greet
+- utter_offer_travel_offer
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+forms:
+  city_form1:
+    required_slots:
+      - first_city
+  city_form2:
+    required_slots:
+      - first_city
+      - second_city
+  city_form3:
+    required_slots:
+      - first_city
+      - second_city
+      - third_city
+  city_form4:
+    required_slots:
+      - first_city
+      - second_city
+      - third_city
+      - fourth_city
+  city_form5:
+    required_slots:
+      - first_city
+      - second_city
+      - third_city
+      - fourth_city
+      - fifth_city
+
+
+

@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Start conversation
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Start travel conversation
+  steps:
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+
+#- rule: Activate form 1
+#  steps:
+#    - intent: one_city
+#    - action: city_form1
+#    - active_loop: city_form1
+
+- rule: Activate form
+  steps:
+  - intent: one_city
+  - action: utter_ask_for_city_names
+  - action: city_form1
+  - active_loop: city_form1
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - first_city: Berlin
+  - active_loop: null
+  - action: utter_submit_city1
