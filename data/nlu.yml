@@ -1,5 +1,4 @@
-version: "3.1"
-
+version: "3.0"
 nlu:
 - intent: greet
   examples: |
@@ -17,7 +16,6 @@ nlu:
     - goodevening
     - good afternoon
     - hallo
-
 - intent: goodbye
   examples: |
     - cu
@@ -30,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -48,12 +44,10 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: wanderlust
   examples: |
     - i want to travel
     - i would like to go to a city trip
-
 - intent: one_city
   examples: |
     - one
@@ -63,3 +57,14 @@ nlu:
     - i want to make a trip to one city
     - one city, no more
     - i only want to visit one city
+- intent: inform
+  examples: |
+    - i'd like to visit [Berlin](first_city)
+    - i'd like to visit [Hamburg](first_city)
+    - i'd like to visit [Bremen](first_city)
+    - i want to visit [Hamburg](first_city)
+    - i want to visit [Berlin](first_city)
+    - i want to visit [Bremen](first_city)
+    - [Berlin](first_city)
+    - [Hamburg](first_city)
+    - [Bremen](first_city)

@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 
 stories:
 
@@ -23,6 +23,34 @@ stories:
       - requested_slot: first_city
   - slot_was_set:
       - first_city: Berlin
+  - slot_was_set:
+      - first_city: null
   - active_loop: null
   - action: utter_submit_city1
 
+- story: interactive_story_1
+  steps:
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+
+- story: interactive_story_1
+  steps:
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+
+- story: interactive_story_1
+  steps:
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: one_city
+  - action: utter_ask_for_city_names
+  - action: city_form1
+  - active_loop: city_form1
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Berlin
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_city1

@@ -1,112 +1,100 @@
-version: "3.1"
-
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - wanderlust
-  - one_city
-
+- one_city
+- wanderlust
+- inform
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
 entities:
-  - first_city
-  - second_city
-  - third_city
-  - fourth_city
-  - fifth_city
-  - amount_cities
-
+- amount_cities
+- fifth_city
+- first_city
+- fourth_city
+- second_city
+- third_city
 slots:
   first_city:
     type: text
     influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: first_city
-        conditions:
-          - active_loop: city_form1
+    - type: from_entity
+      entity: first_city
+      conditions:
+      - active_loop: city_form1
   second_city:
     type: text
-    mappings:
-      - type: from_entity
-        entity: second_city
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: second_city
   third_city:
     type: text
-    mappings:
-      - type: from_entity
-        entity: third_city
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: third_city
   fourth_city:
     type: text
-    mappings:
-      - type: from_entity
-        entity: fourth_city
     influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: fourth_city
   fifth_city:
     type: text
-    mappings:
-      - type: from_entity
-        entity: fifth_city
     influence_conversation: true
-
-
+    mappings:
+    - type: from_entity
+      entity: fifth_city
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_goodbye:
-    - text: "Goodbye ^^"
-
+  - text: Goodbye ^^
   utter_happy:
-    - text: "I am happy ^^, tank you?"
-
+  - text: I am happy ^^, tank you?
   utter_offer_travel_offer:
-    - text: "I will now start a travel offer conversation with you! How many cities do you want to visit?"
-
+  - text: I will now start a travel offer conversation with you! How many cities do you want to visit?
   utter_ask_for_city_names:
-    - text: "What are the city name(s)?"
-
+  - text: What are the city name(s)?
   utter_submit_city1:
-    - text: "Thank you very much. I will remember that you will travel to {first_city}"
-
+  - text: Thank you very much. I will remember that you will travel to {first_city}
 actions:
+- utter_ask_for_city_names
+- utter_goodbye
 - utter_greet
 - utter_offer_travel_offer
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
-
+- utter_submit_city1
 forms:
   city_form1:
     required_slots:
-      - first_city
+    - first_city
   city_form2:
     required_slots:
-      - first_city
-      - second_city
+    - first_city
+    - second_city
   city_form3:
     required_slots:
-      - first_city
-      - second_city
-      - third_city
+    - first_city
+    - second_city
+    - third_city
   city_form4:
     required_slots:
-      - first_city
-      - second_city
-      - third_city
-      - fourth_city
+    - first_city
+    - second_city
+    - third_city
+    - fourth_city
   city_form5:
     required_slots:
-      - first_city
-      - second_city
-      - third_city
-      - fourth_city
-      - fifth_city
-
-
-
+    - first_city
+    - second_city
+    - third_city
+    - fourth_city
+    - fifth_city

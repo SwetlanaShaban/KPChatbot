@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 
 rules:
 
@@ -18,10 +18,21 @@ rules:
   - action: utter_offer_travel_offer
 
 #- rule: Activate form 1
+ # steps:
+ #   - intent: one_city
+  #  - action: city_form1
+ # - - action: utter_ask_for_city_names
+  #  - active_loop: city_form1
+
+#- rule: Submit 1 city
+#  condition:
+#  - active_loop: city_form1
 #  steps:
-#    - intent: one_city
-#    - action: city_form1
-#    - active_loop: city_form1
+#  - action: city_form1
+#  - active_loop: null
+# - slot_was_set:
+ #   - requested_slot: null
+#  - action: utter_submit_city1
 
 - rule: Activate form
   steps:
@@ -31,7 +42,5 @@ rules:
   - active_loop: city_form1
   - slot_was_set:
       - requested_slot: first_city
-  - slot_was_set:
-      - first_city: Berlin
   - active_loop: null
   - action: utter_submit_city1
