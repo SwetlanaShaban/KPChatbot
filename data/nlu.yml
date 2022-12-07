@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 nlu:
 - intent: greet
   examples: |
@@ -20,7 +20,7 @@ nlu:
   examples: |
     - cu
     - good by
-    - cee you later
+    - see you later
     - good night
     - bye
     - goodbye
@@ -57,6 +57,43 @@ nlu:
     - i want to make a trip to one city
     - one city, no more
     - i only want to visit one city
+- intent: two_cities
+  examples: |
+    - two
+    - just two cities
+    - two cities
+    - i just want to visit two cities
+    - i want to make a trip to two cities
+    - two cities, no more
+    - i only want to visit two cities
+- intent: three_cities
+  examples: |
+    - three
+    - just three cities
+    - three cities
+    - i just want to visit three cities
+    - i want to make a trip to three cities
+    - three cities, no more
+    - i only want to visit three cities
+- intent: four_cities
+  examples: |
+    - four
+    - four cities
+    - just four cities
+    - four cities
+    - i just want to visit four cities
+    - i want to make a trip to four cities
+    - four cities, no more
+    - i only want to visit four cities
+- intent: five_cities
+  examples: |
+    - five
+    - just five cities
+    - five cities
+    - i just want to visit five cities
+    - i want to make a trip to five cities
+    - five cities, no more
+    - i only want to visit five cities
 - intent: inform
   examples: |
     - i'd like to visit [Berlin](first_city)

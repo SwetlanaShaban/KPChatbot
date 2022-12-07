@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 rules:
 
@@ -34,7 +34,7 @@ rules:
  #   - requested_slot: null
 #  - action: utter_submit_city1
 
-- rule: Activate form
+- rule: Activate form for one city
   steps:
   - intent: one_city
   - action: utter_ask_for_city_names
@@ -44,3 +44,16 @@ rules:
       - requested_slot: first_city
   - active_loop: null
   - action: utter_submit_city1
+
+- rule: Activate form for two cities
+  steps:
+  - intent: two_cities
+  - action: utter_ask_for_city_names
+  - action: city_form2
+  - active_loop: city_form2
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - requested_slot: second_city
+  - active_loop: null
+  - action: utter_submit_city2

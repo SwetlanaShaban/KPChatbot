@@ -1,9 +1,10 @@
-version: '3.0'
+version: '3.1'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
 - one_city
+- two_cites
 - wanderlust
 - inform
 - greet
@@ -35,24 +36,32 @@ slots:
     mappings:
     - type: from_entity
       entity: second_city
+      conditions:
+      - active_loop: city_form2
   third_city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: third_city
+      conditions:
+      - active_loop: city_form3
   fourth_city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: fourth_city
+      conditions:
+      - active_loop: city_form4
   fifth_city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: fifth_city
+      conditions:
+      - active_loop: city_form5
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -66,6 +75,8 @@ responses:
   - text: What are the city name(s)?
   utter_submit_city1:
   - text: Thank you very much. I will remember that you will travel to {first_city}
+  utter_submit_city2:
+    - text: Thank you very much. I will remember that you will travel to {first_city} and {second_city}
 actions:
 - utter_ask_for_city_names
 - utter_goodbye
