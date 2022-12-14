@@ -24,9 +24,17 @@ stories:
   - slot_was_set:
       - first_city: Berlin
   - slot_was_set:
-      - first_city: null
+      - requested_slot: null
   - active_loop: null
   - action: utter_submit_city1
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: interactive_story_1
   steps:
@@ -54,6 +62,15 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_submit_city1
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
 
 
 
@@ -72,15 +89,23 @@ stories:
   - slot_was_set:
       - first_city: Berlin
   - slot_was_set:
-      - requested_slot: null
+      - first_city: null
   - slot_was_set:
       - requested_slot: second_city
   - slot_was_set:
       - second_city: Hamburg
   - slot_was_set:
-      - first_city: null
+      - requested_slot: null
   - active_loop: null
   - action: utter_submit_city2
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: interactive_story_2
   steps:
@@ -103,14 +128,23 @@ stories:
   - slot_was_set:
     - requested_slot: first_city
   - slot_was_set:
-    - first_city: Berlin
+      - first_city: Berlin
+  - slot_was_set:
+      - first_city: null
+  - slot_was_set:
+      - requested_slot: second_city
+  - slot_was_set:
+      - second_city: Hamburg
   - slot_was_set:
       - requested_slot: null
-  - slot_was_set:
-    - requested_slot: second_city
-  - slot_was_set:
-    - second_city: Hamburg
-  - slot_was_set:
-    - requested_slot: null
   - active_loop: null
   - action: utter_submit_city2
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+

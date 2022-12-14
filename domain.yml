@@ -4,16 +4,19 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - one_city
-- two_cites
+- two_cities
 - wanderlust
 - inform
 - greet
 - goodbye
 - affirm
 - deny
+- to_thank
+- packing_list
 - mood_great
 - mood_unhappy
 - bot_challenge
+
 entities:
 - amount_cities
 - fifth_city
@@ -21,6 +24,7 @@ entities:
 - fourth_city
 - second_city
 - third_city
+
 slots:
   first_city:
     type: text
@@ -62,6 +66,7 @@ slots:
       entity: fifth_city
       conditions:
       - active_loop: city_form5
+
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -73,16 +78,28 @@ responses:
   - text: I will now start a travel offer conversation with you! How many cities do you want to visit?
   utter_ask_for_city_names:
   - text: What are the city name(s)?
+  utter_ask_for_second_city_name:
+  - text: What is the name of the second city?
+  utter_ask_for_more_help:
+  - text: Is there anything else i can help you with
+  utter_packing_list:
+  - text: There are several items you need on vacations like bed linen, Change of clothes, Hygiene articles, Money in the local currency
   utter_submit_city1:
   - text: Thank you very much. I will remember that you will travel to {first_city}
   utter_submit_city2:
     - text: Thank you very much. I will remember that you will travel to {first_city} and {second_city}
+
 actions:
-- utter_ask_for_city_names
 - utter_goodbye
 - utter_greet
 - utter_offer_travel_offer
+- utter_ask_for_city_names
+- utter_ask_for_second_city_name
+- utter_ask_for_more_help
+- utter_packing_list
 - utter_submit_city1
+- utter_submit_city2
+
 forms:
   city_form1:
     required_slots:
