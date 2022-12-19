@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 
 stories:
 
@@ -89,8 +89,6 @@ stories:
   - slot_was_set:
       - first_city: Berlin
   - slot_was_set:
-      - first_city: null
-  - slot_was_set:
       - requested_slot: second_city
   - slot_was_set:
       - second_city: Hamburg
@@ -129,8 +127,6 @@ stories:
     - requested_slot: first_city
   - slot_was_set:
       - first_city: Berlin
-  - slot_was_set:
-      - first_city: null
   - slot_was_set:
       - requested_slot: second_city
   - slot_was_set:

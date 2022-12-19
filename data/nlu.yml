@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 nlu:
 - intent: greet
   examples: |
@@ -27,7 +27,6 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
-    - see you later
 - intent: affirm
   examples: |
     - yes
@@ -48,14 +47,13 @@ nlu:
   examples: |
     - Thank you very much
     - Thank you
-    - That was helpful 
-    - Thank you
+    - That was helpful
     - Thanks
 - intent: packing_list
   examples: |
     - What should i take with me
     - What have to be on a packing list
-    - What should i pack 
+    - What should i pack
     - I need to packing a suitcase
 - intent: wanderlust
   examples: |
@@ -93,7 +91,6 @@ nlu:
     - four
     - four cities
     - just four cities
-    - four cities
     - i just want to visit four cities
     - i want to make a trip to four cities
     - four cities, no more
@@ -118,12 +115,6 @@ nlu:
     - [Berlin](first_city)
     - [Hamburg](first_city)
     - [Bremen](first_city)
-    - i'd like to visit [Berlin](second_city)
-    - i'd like to visit [Hamburg](second_city)
-    - i'd like to visit [Bremen](second_city)
-    - i want to visit [Hamburg](second_city)
-    - i want to visit [Berlin](second_city)
-    - i want to visit [Bremen](second_city)
-    - [Berlin](second_city)
-    - [Hamburg](second_city)
-    - [Bremen](second_city)
+    - [Berlin](first_city), [Hamburg](second_city)
+    - [Berlin](first_city), [Bremen](second_city)
+    - [Berlin](first_city), [Hamburg](second_city)
