@@ -3,21 +3,20 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- two_cities
-- inform
-- wanderlust
 - one_city
-- greet
+- wanderlust
 - goodbye
+- five_cities
+- inform
+- two_cities
+- three_cities
+- four_cities
+- greet
 - affirm
 - deny
 - to_thank
 - packing_list
-- mood_great
-- mood_unhappy
-- bot_challenge
 entities:
-- amount_cities
 - fifth_city
 - first_city
 - fourth_city
@@ -42,24 +41,18 @@ slots:
     mappings:
     - type: from_entity
       entity: third_city
-      conditions:
-      - active_loop: city_form3
   fourth_city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: fourth_city
-      conditions:
-      - active_loop: city_form4
   fifth_city:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: fifth_city
-      conditions:
-      - active_loop: city_form5
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -71,8 +64,6 @@ responses:
   - text: I will now start a travel offer conversation with you! How many cities do you want to visit?
   utter_ask_for_city_names:
   - text: What are the city name(s)?
-  utter_ask_for_second_city_name:
-  - text: What is the name of the second city?
   utter_ask_for_more_help:
   - text: Is there anything else i can help you with
   utter_packing_list:
@@ -81,16 +72,24 @@ responses:
   - text: Thank you very much. I will remember that you will travel to {first_city}
   utter_submit_city2:
   - text: Thank you very much. I will remember that you will travel to {first_city} and {second_city}
+  utter_submit_city3:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city} and {third_city}
+  utter_submit_city4:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city} and {fourth_city}
+  utter_submit_city5:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city}, {fourth_city} and {fifth_city}
 actions:
 - utter_ask_for_city_names
 - utter_ask_for_more_help
-- utter_ask_for_second_city_name
 - utter_goodbye
 - utter_greet
 - utter_offer_travel_offer
 - utter_packing_list
 - utter_submit_city1
 - utter_submit_city2
+- utter_submit_city3
+- utter_submit_city4
+- utter_submit_city5
 forms:
   city_form1:
     required_slots:

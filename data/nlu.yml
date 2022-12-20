@@ -27,6 +27,7 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
+    - bb
 - intent: affirm
   examples: |
     - yes
@@ -117,4 +118,6 @@ nlu:
     - [Bremen](first_city)
     - [Berlin](first_city), [Hamburg](second_city)
     - [Berlin](first_city), [Bremen](second_city)
-    - [Berlin](first_city), [Hamburg](second_city)
+    - [Berlin](first_city), [Bremen](second_city), [Hamburg](third_city)
+    - [Berlin](first_city), [Bremen](second_city), [Hamburg](third_city), [Dresden](fourth_city)
+    - [Berlin](first_city), [Bremen](second_city), [Hamburg](third_city), [Dresden](fourth_city), [Kiel](fifth_city)
