@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 stories:
 
@@ -19,6 +19,63 @@ stories:
   - slot_was_set:
       - requested_slot: null
   - active_loop: null
+  - action: validate_city_form1
+  - action: utter_submit_city1
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer one city second city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: one_city
+  - action: utter_ask_for_city_names
+  - action: city_form1
+  - active_loop: city_form1
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - first_city: Muenchen
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form1
+  - action: utter_submit_city1
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer one city third city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: one_city
+  - action: utter_ask_for_city_names
+  - action: city_form1
+  - active_loop: city_form1
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - first_city: Stuttgart
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form1
   - action: utter_submit_city1
   - intent: to_thank
   - action: utter_ask_for_more_help
@@ -55,6 +112,7 @@ stories:
   - slot_was_set:
       - requested_slot: null
   - active_loop: null
+  - action: validate_city_form2
   - action: utter_submit_city2
   - intent: to_thank
   - action: utter_ask_for_more_help
@@ -65,9 +123,302 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-
-- story: interactive_story_1
+- story: travel offer two cities second version
   steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: two_cities
+  - action: utter_ask_for_city_names
+  - action: city_form2
+  - active_loop: city_form2
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - first_city: Dresden
+  - slot_was_set:
+      - requested_slot: second_city
+  - slot_was_set:
+      - second_city: Koeln
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form2
+  - action: utter_submit_city2
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer two cities third version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: two_cities
+  - action: utter_ask_for_city_names
+  - action: city_form2
+  - active_loop: city_form2
+  - slot_was_set:
+      - requested_slot: first_city
+  - slot_was_set:
+      - first_city: Muenchen
+  - slot_was_set:
+      - requested_slot: second_city
+  - slot_was_set:
+      - second_city: Kiel
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form2
+  - action: utter_submit_city2
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer three cities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: three_cities
+  - action: utter_ask_for_city_names
+  - action: city_form3
+  - active_loop: city_form3
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Berlin
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Bremen
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Hamburg
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form3
+  - action: utter_submit_city3
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer three cities second version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: three_cities
+  - action: utter_ask_for_city_names
+  - action: city_form3
+  - active_loop: city_form3
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: koeln
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Frankfurt
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Hannover
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form3
+  - action: utter_submit_city3
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer three cities third version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: three_cities
+  - action: utter_ask_for_city_names
+  - action: city_form3
+  - active_loop: city_form3
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Hamburg
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Stuttgart
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Koeln
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form3
+  - action: utter_submit_city3
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer four cities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: four_cities
+  - action: utter_ask_for_city_names
+  - action: city_form4
+  - active_loop: city_form4
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Berlin
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Bremen
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Hamburg
+  - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
+    - fourth_city: Dresden
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form4
+  - action: utter_submit_city4
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer four cities second version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: four_cities
+  - action: utter_ask_for_city_names
+  - action: city_form4
+  - active_loop: city_form4
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Kiel
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Hannover
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Frankfurt
+  - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
+    - fourth_city: Stuttgart
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form4
+  - action: utter_submit_city4
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer four cities third version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: four_cities
+  - action: utter_ask_for_city_names
+  - action: city_form4
+  - active_loop: city_form4
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Berlin
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Hamburg
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Frankfurt
+  - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
+    - fourth_city: Muenchen
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form4
+  - action: utter_submit_city4
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer five cities
+  steps:
+  - intent: greet
+  - action: utter_greet
   - intent: wanderlust
   - action: utter_offer_travel_offer
   - intent: five_cities
@@ -79,16 +430,119 @@ stories:
   - slot_was_set:
     - first_city: Berlin
   - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
     - second_city: Bremen
+  - slot_was_set:
+    - requested_slot: third_city
   - slot_was_set:
     - third_city: Hamburg
   - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
     - fourth_city: Dresden
+  - slot_was_set:
+    - requested_slot: fifth_city
   - slot_was_set:
     - fifth_city: Kiel
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: validate_city_form5
   - action: utter_submit_city5
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer five cities secound version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: five_cities
+  - action: utter_ask_for_city_names
+  - action: city_form5
+  - active_loop: city_form5
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Munechen
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Hamburg
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Frankfurt
+  - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
+    - fourth_city: Koeln
+  - slot_was_set:
+    - requested_slot: fifth_city
+  - slot_was_set:
+    - fifth_city: Berlin
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form5
+  - action: utter_submit_city5
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: travel offer five cities third version
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: wanderlust
+  - action: utter_offer_travel_offer
+  - intent: five_cities
+  - action: utter_ask_for_city_names
+  - action: city_form5
+  - active_loop: city_form5
+  - slot_was_set:
+    - requested_slot: first_city
+  - slot_was_set:
+    - first_city: Koeln
+  - slot_was_set:
+    - requested_slot: second_city
+  - slot_was_set:
+    - second_city: Kiel
+  - slot_was_set:
+    - requested_slot: third_city
+  - slot_was_set:
+    - third_city: Stuttgart
+  - slot_was_set:
+    - requested_slot: fourth_city
+  - slot_was_set:
+    - fourth_city: Dresden
+  - slot_was_set:
+    - requested_slot: fifth_city
+  - slot_was_set:
+    - fifth_city: Bremen
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_city_form5
+  - action: utter_submit_city5
+  - intent: to_thank
+  - action: utter_ask_for_more_help
+  - intent: packing_list
+  - action: utter_packing_list
+  - intent: to_thank
+  - action: utter_ask_for_more_help
   - intent: goodbye
   - action: utter_goodbye

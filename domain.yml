@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.1'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -53,43 +53,7 @@ slots:
     mappings:
     - type: from_entity
       entity: fifth_city
-responses:
-  utter_greet:
-  - text: Hey! How are you?
-  utter_goodbye:
-  - text: Goodbye ^^
-  utter_happy:
-  - text: I am happy ^^, tank you?
-  utter_offer_travel_offer:
-  - text: I will now start a travel offer conversation with you! How many cities do you want to visit?
-  utter_ask_for_city_names:
-  - text: What are the city name(s)?
-  utter_ask_for_more_help:
-  - text: Is there anything else i can help you with
-  utter_packing_list:
-  - text: There are several items you need on vacations like bed linen, Change of clothes, Hygiene articles, Money in the local currency
-  utter_submit_city1:
-  - text: Thank you very much. I will remember that you will travel to {first_city}
-  utter_submit_city2:
-  - text: Thank you very much. I will remember that you will travel to {first_city} and {second_city}
-  utter_submit_city3:
-  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city} and {third_city}
-  utter_submit_city4:
-  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city} and {fourth_city}
-  utter_submit_city5:
-  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city}, {fourth_city} and {fifth_city}
-actions:
-- utter_ask_for_city_names
-- utter_ask_for_more_help
-- utter_goodbye
-- utter_greet
-- utter_offer_travel_offer
-- utter_packing_list
-- utter_submit_city1
-- utter_submit_city2
-- utter_submit_city3
-- utter_submit_city4
-- utter_submit_city5
+
 forms:
   city_form1:
     required_slots:
@@ -116,3 +80,47 @@ forms:
     - third_city
     - fourth_city
     - fifth_city
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_goodbye:
+  - text: Goodbye ^^
+  utter_happy:
+  - text: I am happy ^^, tank you?
+  utter_offer_travel_offer:
+  - text: I will now start a travel offer conversation with you! How many cities do you want to visit?
+  utter_ask_for_city_names:
+  - text: What are the city name(s)?
+  utter_ask_for_more_help:
+  - text: Is there anything else i can help you with
+  utter_packing_list:
+  - text: There are several items you need on vacations like bed linen, Change of clothes, Hygiene articles, Money in the local currency
+  utter_submit_city1:
+  - text: Thank you very much. I will remember that you will travel to {first_city}
+  utter_submit_city2:
+  - text: Thank you very much. I will remember that you will travel to {first_city} and {second_city}
+  utter_submit_city3:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city} and {third_city}
+  utter_submit_city4:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city} and {fourth_city}
+  utter_submit_city5:
+  - text: Thank you very much. I will remember that you will travel to {first_city}, {second_city}, {third_city}, {fourth_city} and {fifth_city}
+
+actions:
+- utter_ask_for_city_names
+- utter_ask_for_more_help
+- utter_goodbye
+- utter_greet
+- utter_offer_travel_offer
+- utter_packing_list
+- utter_submit_city1
+- utter_submit_city2
+- utter_submit_city3
+- utter_submit_city4
+- utter_submit_city5
+- validate_city_form1
+- validate_city_form2
+- validate_city_form3
+- validate_city_form4
+- validate_city_form5

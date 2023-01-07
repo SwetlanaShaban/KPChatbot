@@ -1,0 +1,10 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "city_form2",
+    "city_form3",
+    "city_form4",
+    "city_form1",
+    "city_form5"
+  ]
+}

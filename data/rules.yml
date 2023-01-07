@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 rules:
 
@@ -42,6 +42,7 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
+    - action: validate_city_form1
     - action: utter_submit_city1
 
 - rule: Activate form for two cities
@@ -59,6 +60,7 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
+    - action: validate_city_form2
     - action: utter_submit_city2
 
 - rule: Activate form for three cities
@@ -76,6 +78,7 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
+    - action: validate_city_form3
     - action: utter_submit_city3
 
 - rule: Activate form for four cities
@@ -93,6 +96,7 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
+    - action: validate_city_form4
     - action: utter_submit_city4
 
 
@@ -111,4 +115,5 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
+    - action: validate_city_form5
     - action: utter_submit_city5

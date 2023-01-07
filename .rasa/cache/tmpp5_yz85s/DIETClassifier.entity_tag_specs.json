@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-fifth_city",
+      "2": "I-fifth_city",
+      "3": "L-fifth_city",
+      "4": "U-fifth_city",
+      "5": "B-first_city",
+      "6": "I-first_city",
+      "7": "L-first_city",
+      "8": "U-first_city",
+      "9": "B-fourth_city",
+      "10": "I-fourth_city",
+      "11": "L-fourth_city",
+      "12": "U-fourth_city",
+      "13": "B-second_city",
+      "14": "I-second_city",
+      "15": "L-second_city",
+      "16": "U-second_city",
+      "17": "B-third_city",
+      "18": "I-third_city",
+      "19": "L-third_city",
+      "20": "U-third_city",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-fifth_city": 1,
+      "I-fifth_city": 2,
+      "L-fifth_city": 3,
+      "U-fifth_city": 4,
+      "B-first_city": 5,
+      "I-first_city": 6,
+      "L-first_city": 7,
+      "U-first_city": 8,
+      "B-fourth_city": 9,
+      "I-fourth_city": 10,
+      "L-fourth_city": 11,
+      "U-fourth_city": 12,
+      "B-second_city": 13,
+      "I-second_city": 14,
+      "L-second_city": 15,
+      "U-second_city": 16,
+      "B-third_city": 17,
+      "I-third_city": 18,
+      "L-third_city": 19,
+      "U-third_city": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
